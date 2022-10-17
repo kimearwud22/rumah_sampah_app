@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pesans",
+  "info": {
+    "singularName": "pesan",
+    "pluralName": "pesans",
+    "displayName": "pesan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "tanggal": {
+      "type": "datetime"
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "lokasi": {
+      "type": "dynamiczone",
+      "components": [
+        "baru.lokasi"
+      ]
+    },
+    "tlpn": {
+      "type": "string",
+      "regex": "^(\\+62|62|0)8[1-9][0-9]{6,9}$",
+      "required": true
+    }
+  }
+}

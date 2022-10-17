@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artikels",
+  "info": {
+    "singularName": "artikel",
+    "pluralName": "artikels",
+    "displayName": "artikel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DesOrganik": {
+      "type": "text"
+    },
+    "DesAnorganik": {
+      "type": "text"
+    },
+    "DesSisa": {
+      "type": "text"
+    }
+  }
+}

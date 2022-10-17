@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benners",
+  "info": {
+    "singularName": "benner",
+    "pluralName": "benners",
+    "displayName": "benner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "benner_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "text"
+    }
+  }
+}
