@@ -1,8 +1,8 @@
-const Question = require('../models/Questions')
+const Questions = require('../models/Questions');
 module.exports = {
     getAllQuestion: async (req, res) => {
         try {
-            const allQuestion = await Question.find();
+            const allQuestion = await Questions.find();
             res.json(allQuestion);
         } catch (err) {
             res.status(500).json({ message: err.message });
@@ -10,15 +10,15 @@ module.exports = {
     },
     getInventarisById: async (req, res) => {
         try {
-            const question = await Question.findById(req.params.id);
+            const question = await Questions.findById(req.params.id);
             res.json(question);
         } catch (err) {
             res.status(500).json({ message: err.message });
         }
     },
     addQuestion: async (req, res) => {
-        const data = new Question({
-            name: req.body.nama,
+        const data = new Questions({
+            nama: req.body.nama,
             tlpn: req.body.tlpn,
             date: req.body.date,
             alamat: req.body.alamat,
@@ -43,7 +43,7 @@ module.exports = {
             jsampah: req.body.jsampah
         }
         try {
-            const result = await Question.findOneAndUpdate(filter, updateData)
+            const result = await Questions.findOneAndUpdate(filter, updateData)
             res.json(result)
         } catch (err) {
             res.status(500).json({ message: err.message })
@@ -53,7 +53,7 @@ module.exports = {
         const filter = { kode: req.params.id }
 
         try {
-            await Question.deleteOne(filter)
+            await Questions.deleteOne(filter)
             res.send("data telah terhapus")
         } catch (error) {
             res.status(409).json({ message: error.message })

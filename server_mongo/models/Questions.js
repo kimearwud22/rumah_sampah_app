@@ -3,29 +3,29 @@ const mongoose = require('mongoose')
 const questionSchema = new mongoose.Schema({
     nama:{
         required: true,
-        type: String
+        type: String,
     },
     tlpn:{
         required: true,
-        type: String
+        type: String,
     },
     date:{
         required: true,
-        type: String
+        type: String,
     },
     alamat:{
         required: true,
-        type: String
+        type: String,
     },
     sampah:{
         required: true,
-        type: String
+        type: String,
     },
     jsampah:{
         required: true,
-        type: Number
+        type: Number,
     },
      
-})
+});
 
-module.exports = mongoose.model('Question',questionSchema,'question')
+module.exports = mongoose.model('Question',questionSchema);
