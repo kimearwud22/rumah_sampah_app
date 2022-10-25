@@ -23,7 +23,11 @@ const questionSchema = new mongoose.Schema({
     },
     jsampah:{
         required: true,
-        type: Number,
+        type: String,
+    },
+    pesan:{
+        required: true,
+        type: String,
     },
      
 });

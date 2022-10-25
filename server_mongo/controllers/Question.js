@@ -23,7 +23,8 @@ module.exports = {
             date: req.body.date,
             alamat: req.body.alamat,
             sampah: req.body.sampah,
-            jsampah: req.body.jsampah
+            jsampah: req.body.jsampah,
+            pesan: req.body.pesan
         })
         try {
             const result = await data.save()
