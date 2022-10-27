@@ -8,7 +8,7 @@ module.exports = {
             res.status(500).json({ message: err.message });
         }
     },
-    getInventarisById: async (req, res) => {
+    getQuestionById: async (req, res) => {
         try {
             const question = await Questions.findById(req.params.id);
             res.json(question);
@@ -51,7 +51,7 @@ module.exports = {
         }
     },
     delete: async (req, res) => {
-        const filter = { kode: req.params.id }
+        const filter = { _id: req.params.id }
 
         try {
             await Questions.deleteOne(filter)
@@ -61,4 +61,5 @@ module.exports = {
 
         }
     },
+    
 }

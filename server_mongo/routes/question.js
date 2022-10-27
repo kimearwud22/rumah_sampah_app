@@ -6,8 +6,8 @@ routerQuestion.route('/api/question')
     .get(Question.getAllQuestion)
     .post(Question.addQuestion)
 
-routerQuestion.route('/question/:id')
-    .get(Question.getInventarisById)
+routerQuestion.route('/api/question/:id')
+    .get(Question.getQuestionById)
     .put(Question.update)
     .delete(Question.delete)
 
